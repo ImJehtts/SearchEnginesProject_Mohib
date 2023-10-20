@@ -10,7 +10,7 @@ def searched():
 
    restrict_file = open('restricted.txt', 'r', encoding="utf-8")
    restricted_word = restrict_file.readline()
-   while restricted_word != "" and restricted_word.strip() != ser.strip():
+   while restricted_word != "" and restricted_word.strip() not in ser.strip():
        restricted_word = restrict_file.readline()
    if restricted_word == "":
        currsearch.set(ser)
